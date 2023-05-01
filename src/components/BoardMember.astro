@@ -1,0 +1,22 @@
+---
+const { img, name, term, email,title } = Astro.props
+---
+<div style="display: flex; align-items: center; gap: 0.5rem; flex-direction: row;">
+    <img src={img} style="border-radius: 10000px;" width="50">
+    <div style="display: flex; flex-direction: column; gap: 0.025rem">
+        <p>
+            <b>{name}</b>, {title}, {term}
+        </p>
+        <b><a href={"mailto:" + email} class="blue">{email}</a></b>
+    </div>
+</div>
+
+<style>
+    .blue {
+        color: #1C71D8;
+    }
+
+    p {
+        margin: 0;
+    }
+</style>

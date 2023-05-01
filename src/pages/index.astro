@@ -3,33 +3,33 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+<Layout title="Crestview Community Association">
+	<div class="bg-image"></div>
+	<main class="bg-wrap">
+		<h1 class="title">🏘️ Crestview Community Association</h1>
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			The Crestview Community Association is dedicated to promoting <b>affordable housing</b> and <b>equal mobility</b> inside the Crestview neighborhood in ☀️ beautiful Austin, Texas.
 		</p>
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+				href="/newsletter"
+				title="Newsletter"
+				body="Subscribe to & read the latest issue of the CCA Newsletter"
 			/>
 			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
+				href="/join"
+				title="Get involved!"
+				body="Join the Crestview Community Association! Open for free to all neighborhood residents."
 			/>
 			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
+				href="/contact"
+				title="Get in touch"
+				body="Directly contact the Crestview Community Association"
 			/>
 			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
+				href="/bylaws-board"
+				title="Bylaws & The Board"
+				body="View our current bylaws, revisions & elected board members."
 			/>
 		</ul>
 	</main>
@@ -45,6 +45,18 @@ import Card from '../components/Card.astro';
 		font-size: 3rem;
 		font-weight: 800;
 		margin: 0;
+	}
+	.bg-image {
+		position: absolute;
+		opacity: 0.2;
+		background-image: url("/littledeli.jpg");
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background-position-x: center;
+	}
+	.bg-wrap {
+		position: relative;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -77,5 +89,9 @@ import Card from '../components/Card.astro';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
+	}
+
+	.title {
+		color: #1C71D8;
 	}
 </style>
