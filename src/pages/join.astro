@@ -1,0 +1,76 @@
+---
+import Layout from "../layouts/PageLayout.astro"
+---
+
+<Layout title="Get Involved">
+    <p>We're happy to hear you want to get involved with the CCA! 
+        <br><br>Just a few things to keep in mind:
+        <br>
+        <ul>
+            <li>You will be signed up automatically for the CCA newsletter, you can unsubscribe without losing membership at any time.</li>
+            <li>You agree to abide by the Code of Conduct at <a href="https://conduct.crestview.community" target="_blank">conduct.crestview.community</a></li>
+        </ul>
+    </p>
+
+    <form netlify>
+        <label for="name">Your name:</label>
+        <br>
+        <input type="text" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <br>
+        <input type="email" name="email" required>
+        <br>
+        <label for="address">Street Address:</label>
+        <br>
+        <input type="text" name="address" required>
+        <br><br>
+        <fieldset>
+            <legend>I affirm that I live in 78757</legend>
+            <label for="78757">Yes</label>
+            <input type="radio" name="78757" value="true" required>
+        </fieldset>
+        <br>
+        <button type="submit">Register</button>
+    </form>
+</Layout>
+
+<style>
+    input:not([type=radio]), fieldset {
+        padding-left: 0.5rem;
+        padding-right: 0.25rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        max-width: 380px;
+        width: 100%;
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+        margin-left: 0;
+        border: 2px dashed rgb(var(--accent));
+        border-radius: 5px;
+    }
+
+    fieldset {
+        padding: 0.5rem 1rem !important;
+        padding-right: 0 !important;
+        margin: 0;
+    }
+
+    button {
+        padding: 0.5rem 1.5rem;
+        border: 2px dashed rgb(var(--accent));
+        border-radius: 5px;
+        background: rgb(var(--accent));
+        font-weight: 800;
+        color: white;
+        transition: 0.25s ease;
+    }
+
+    button:hover {
+        transform: translateY(-6px);
+    }
+
+    button:active {
+        transform: scale(0.9);
+    }
+</style>
